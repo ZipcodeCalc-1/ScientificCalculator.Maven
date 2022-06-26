@@ -57,14 +57,14 @@ public class ScientificCalc {
         return trigUnit.name();
     }
 
-    private double convertRadTrigUnit(double x) {
+    private double convertToRadTrigMode(double x) {
         if (getTrigMode() == "DEGREES") {
             return Math.toRadians(x);
         }
         return x;
     }
 
-    private double convertDegTrigUnit(double x) {
+    private double convertToDegTrigMode(double x) {
         if (getTrigMode() == "RADIANS") {
             return Math.toDegrees(x);
         }
@@ -72,33 +72,33 @@ public class ScientificCalc {
     }
 
     public double sin(double x) {
-        double convertedNum = convertDegTrigUnit(x);
-        return convertDegTrigUnit(Math.sin(convertedNum));
+        double convertedNum = convertToRadTrigMode(x);
+        return  convertToDegTrigMode(Math.sin(convertedNum));
     }
 
     public double cos(double x) {
-        double convertedNum = convertDegTrigUnit(x);
-        return convertDegTrigUnit(Math.cos(convertedNum));
+        double convertedNum = convertToRadTrigMode(x);
+        return  convertToDegTrigMode(Math.cos(convertedNum));
     }
 
     public double tan(double x) {
-        double convertedNum = convertDegTrigUnit(x);
-        return convertDegTrigUnit(Math.tan(convertedNum));
+        double convertedNum = convertToRadTrigMode(x);
+        return  convertToDegTrigMode(Math.tan(convertedNum));
     }
 
     public double invSin(double x) {
-        double convertedNum = convertDegTrigUnit(x);
-        return convertDegTrigUnit(Math.asin(convertedNum));
+        double convertedNum = convertToRadTrigMode(x);
+        return  convertToDegTrigMode(Math.asin(convertedNum));
     }
 
     public double invCos(double x) {
-        double convertedNum = convertDegTrigUnit(x);
-        return convertDegTrigUnit(Math.acos(convertedNum));
+        double convertedNum = convertToRadTrigMode(x);
+        return  convertToDegTrigMode(Math.acos(convertedNum));
     }
 
     public double invTan(double x) {
-        double convertedNum = convertDegTrigUnit(x);
-        return convertDegTrigUnit(Math.atan(convertedNum));
+        double convertedNum = convertToRadTrigMode(x);
+        return  convertToDegTrigMode(Math.atan(convertedNum));
     }
 
     public static double log(double x) {
